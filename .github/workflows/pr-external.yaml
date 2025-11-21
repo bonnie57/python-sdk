@@ -24,7 +24,7 @@ jobs:
 
   tests:
     needs: [authorize, Timestamp_PR_APPROVED]
-    uses: ./build-test-workflow.yml
+    uses: ./.github/workflows/build-test-workflow.yml
     with:
       sha: ${{ github.event.pull_request.head.sha }}
       ENVIRONMENT: "aeneid"
